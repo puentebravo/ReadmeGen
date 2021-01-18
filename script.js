@@ -11,7 +11,7 @@ inquirer
     {
         type: "input",
         name: "description",
-        message: "Briefly describe your project. What does it do? Why was it created? What is its purpose?"
+        message: "Briefly describe your project."
     },
     {
         type: "input",
@@ -26,7 +26,7 @@ inquirer
     {
         type: "input",
         name: "usage",
-        message: "How do you use your project? What does a user need to know to get full use out of it?"
+        message: "How do you use your project or app?"
     },
     {
         type: "input",
@@ -43,14 +43,14 @@ inquirer
     const fileName = `${data.title.toLowerCase().split(" ").join("")}README.md`;
     const content = `
     
-    # ${data.title}
+# ${data.title}
 
-    ## Description 
+## Description 
     
     ${data.description}
     
     
-    ## Table of Contents (Optional)
+## Table of Contents (Optional)
     
     * [Installation](#installation)
     * [Usage](#usage)
@@ -58,23 +58,23 @@ inquirer
     * [License](#license)
     
     
-    ## Installation
+## Installation
     
     ${data.install}
     
-    ## Usage 
+## Usage 
     
    ${data.usage}
     
    [demo](${data.screenshot})
     
     
-    ## Credits
+## Credits
     
     ${data.credits}
     
     
-    ## License
+## License
     
     Content in this project is governed under the ${data.license} license, outlined in the included LICENSE document. `
 
