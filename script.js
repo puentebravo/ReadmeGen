@@ -37,6 +37,16 @@ inquirer
         type: "input",
         name: "credits",
         message: "Describe, who, if anyone, helped or contributed to this project."
+    },
+    {
+        type: "input",
+        name: "copyyear",
+        message: "What year is it?"
+    },
+    {
+        type: "input",
+        name: "copyowner",
+        message: "Who holds the copyright for this project?"
     }
 ])
 .then((data) => {
@@ -47,36 +57,40 @@ inquirer
 
 ## Description 
     
-    ${data.description}
+${data.description}
     
     
-## Table of Contents (Optional)
+## Table of Contents
     
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [License](#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
     
     
 ## Installation
     
-    ${data.install}
+${data.install}
     
 ## Usage 
     
-   ${data.usage}
+${data.usage}
     
-   [demo](${data.screenshot})
+[demo](${data.screenshot})
     
     
 ## Credits
     
-    ${data.credits}
+${data.credits}
     
     
 ## License
     
-    Content in this project is governed under the ${data.license} license, outlined in the included LICENSE document. `
+Content in this project is governed under the ${data.license} license, outlined in the included LICENSE document. 
+
+-----------
+
+Copyright [2020] [Charlie Puente]`
 
     fs.writeFile(fileName, content, (err) => {
         err ? console.log(err):console.log("README created. Have a nice day.")
