@@ -78,5 +78,7 @@ inquirer
     
     Content in this project is governed under the ${data.license} license, outlined in the included LICENSE document. `
 
-    fs.writeFile(fileName, content)
+    fs.writeFile(fileName, content, (err) => {
+        err ? console.log(err):console.log("README created. Have a nice day.")
+    })
 })
