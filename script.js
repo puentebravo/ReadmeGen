@@ -40,6 +40,11 @@ inquirer
     },
     {
         type: "input",
+        name: "license",
+        message: "Which License governs the use of your project?"
+    },
+    {
+        type: "input",
         name: "copyyear",
         message: "What year is it?"
     },
@@ -90,7 +95,7 @@ Content in this project is governed under the ${data.license} license, outlined 
 
 -----------
 
-Copyright [2020] [Charlie Puente]`
+Copyright [${data.copyyear}] [${data.copyowner}]`
 
     fs.writeFile(fileName, content, (err) => {
         err ? console.log(err):console.log("README created. Have a nice day.")
