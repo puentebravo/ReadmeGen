@@ -21,12 +21,10 @@ To install, download or clone this repository to your machine. Once done, instal
     
 With all dependencies installed, run the script in a Node.js enabled terminal instance, answer the prompts, and copy the resulting file into your project's directory.
     
-[demo]()
-    
     
 ## Credits
     
-I would like to thank my amazing study group for their feedback and peer review. Additionally, I am immensely grateful for the 
+I'm immensely grateful for the guidance and knowledge of my Instructors at the Columbia Engineering Coding Bootcamp. I would also like to thank my study group, whose peer review and feedback were vital to this project's completion.
     
     
 ## License
