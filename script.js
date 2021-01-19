@@ -1,5 +1,6 @@
 const inquirer = require("inquirer")
 const fs = require("fs")
+const generate = require("./Utilities/generate")
 
 inquirer
 .prompt([
@@ -56,46 +57,7 @@ inquirer
 ])
 .then((data) => {
     const fileName = `${data.title.toLowerCase().split(" ").join("")}README.md`;
-    const content = `
-    
-# ${data.title}
-
-## Description 
-    
-${data.description}
-    
-    
-## Table of Contents
-    
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
-    
-    
-## Installation
-    
-${data.install}
-    
-## Usage 
-    
-${data.usage}
-    
-[demo](${data.screenshot})
-    
-    
-## Credits
-    
-${data.credits}
-    
-    
-## License
-    
-Content in this project is governed under the ${data.license} license, outlined in the included LICENSE document. 
-
------------
-
-Copyright [${data.copyyear}] [${data.copyowner}]`
+    const content = generate.generateMarkdown(data)
 
     fs.writeFile(fileName, content, (err) => {
         err ? console.log(err):console.log("README created. Have a nice day.")
