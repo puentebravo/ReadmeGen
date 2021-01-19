@@ -56,6 +56,7 @@ inquirer
     }
 ])
 .then((data) => {
+    const license = `${data.license}`
     const fileName = `${data.title.toLowerCase().split(" ").join("")}README.md`;
     const content = generate.generateMarkdown(data)
 
