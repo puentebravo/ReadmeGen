@@ -53,7 +53,7 @@ function generateMarkdown(data) {
       
   ${data.usage}
       
-  [demo](${data.screenshot})
+  ![](${data.screenshot})
 
   ## Credits
       
@@ -61,13 +61,17 @@ function generateMarkdown(data) {
       
   ## Contributing
 
+  ${data.contributing}
+
   ## Questions?
-
-
   
+  Questions about this project can be directed to: 
+  - Github: ${data.github}
+  - Email: ${data.email}
+
   ## Tests
 
-
+  ${data.tests}
 
   ## License
       
