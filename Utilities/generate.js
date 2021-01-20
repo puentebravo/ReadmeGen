@@ -2,7 +2,12 @@
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+    if (license !== "none") {
+        return `![](https://img.shields.io/badge/license-${license}-blue)`
+    }
+    return ``
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -18,7 +23,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
     if (license !== null) {
-      return `Content in this project is governed under thegit following license:`
+      return `Content in this project is governed under the following license:`
     } else {
         return ``
     }
@@ -28,7 +33,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
     
-  # ${data.title} ![license badge](https://img.shields.io/github/license/${data.github}/${data.repo}?style=plastic)
+  # ${data.title} ${renderLicenseBadge()}
   
   ## Description 
       

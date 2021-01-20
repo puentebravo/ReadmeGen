@@ -40,8 +40,9 @@ inquirer
         message: "Describe, who, if anyone, helped or contributed to this project."
     },
     {
-        type: "input",
+        type: "list",
         name: "license",
+        choices: ["none", "MIT", "Creative Commons V1.0 Universal", "Mozilla Public License 2.0"],
         message: "Which License governs the use of your project?"
     },
     {
