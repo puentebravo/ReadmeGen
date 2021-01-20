@@ -62,7 +62,7 @@ inquirer
     {
         type: "list",
         name: "license",
-        choices: ["none", "MIT", "Creative Commons V1.0 Universal", "Mozilla Public License 2.0", "GNU General V3.0", "BSD 2-Clause", "BSD 3-Clause", "Boost Software 1.0", "Eclipse Publice 2.0", "GNU Affero General v3.0", "GNU General v2.0", "GNU Lesser General v2.1", "The Unlicense"],
+        choices: ["none", "MIT", "CCLv1.0", "MPL2.0", "GNU3.0", "Unlicense"],
         message: "Which License governs the use of your project?"
     },
     {
