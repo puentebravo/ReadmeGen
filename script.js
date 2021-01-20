@@ -61,7 +61,7 @@ inquirer
     const fileName = `${data.title.toLowerCase().split(" ").join("")}README.md`;
     const content = generate.generateMarkdown(data)
 
-    fs.writeFile(fileName, content, (err) => {
+    fs.writeFile(`Output/${fileName}`, content, (err) => {
         err ? console.log(err):console.log("README created. Have a nice day.")
     })
 })
