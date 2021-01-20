@@ -18,7 +18,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
     if (license !== null) {
-      return `Content in this project is governed under the following license:`
+      return `Content in this project is governed under thegit following license:`
     } else {
         return ``
     }
