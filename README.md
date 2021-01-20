@@ -24,8 +24,10 @@
   ## Usage 
       
   With all dependencies installed, run the script.js file in a Node.js enabled terminal instance, answer the prompts, and move the resulting file from the output folder into your project repository. 
-      
-  ![](./Assets/ReadmeGendemo.webm)
+
+  ![](./Assets/Shortdemo.gif)
+ 
+  [Full Video Walkthrough](https://drive.google.com/file/d/1lVZJA35eUtbiLd5bZx4KlapMuClAhudb/view)
 
   ## Credits
       
