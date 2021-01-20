@@ -2,6 +2,8 @@ const inquirer = require("inquirer")
 const fs = require("fs")
 const generate = require("./Utilities/generate")
 
+
+
 inquirer
 .prompt([
     {
@@ -22,7 +24,7 @@ inquirer
     {
         type: "input",
         name: "install",
-        message: "How do you install your project? How do you run it?"
+        message: "How do you install your project?"
     },
     {
         type: "input",
@@ -37,12 +39,47 @@ inquirer
     {
         type: "input",
         name: "credits",
-        message: "Describe, who, if anyone, helped or contributed to this project."
+        message: "Please list any acknowledgments here."
+    },
+    {
+        type: "confirm",
+        name: "addcredit",
+        message: "Would you like to add a contributor?"
+    },
+    {
+        type: "input",
+        name: "teammate",
+        message: "Please list the name, role, and github profile of your colleague here. Make sure to use [text](url) format for any links."
+    },
+    {
+        type: "confirm",
+        name: "addagain",
+        message: "Would you like to add another contributor?"
+    },
+    {
+        type: "input",
+        name: "contributing",
+        message: "How do you want others to be able to contribute to your project?"
+    },
+    {
+        type: "input",
+        name: "github",
+        message: "What is your github username?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "What is a good email address for others to contact you with questions?"
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "If you've written any tests for your application, please list how to run them here."
     },
     {
         type: "list",
         name: "license",
-        choices: ["none", "MIT", "Creative Commons V1.0 Universal", "Mozilla Public License 2.0"],
+        choices: ["none", "MIT", "Creative Commons V1.0 Universal", "Mozilla Public License 2.0", "GNU General V3.0", "BSD 2-Clause", "BSD 3-Clause", "Boost Software 1.0", "Eclipse Publice 2.0", "GNU Affero General v3.0", "GNU General v2.0", "GNU Lesser General v2.1", "The Unlicense"],
         message: "Which License governs the use of your project?"
     },
     {
@@ -57,9 +94,8 @@ inquirer
     }
 ])
 .then((data) => {
-    const license = `${data.license}`
     const fileName = `${data.title.toLowerCase().split(" ").join("")}README.md`;
-    const content = generate.generateMarkdown(data)
+    const content = generate.generateMarkdown(data);
 
     fs.writeFile(`Output/${fileName}`, content, (err) => {
         err ? console.log(err):console.log("README created. Have a nice day.")
