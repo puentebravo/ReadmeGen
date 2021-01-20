@@ -2,8 +2,6 @@ const inquirer = require("inquirer")
 const fs = require("fs")
 const generate = require("./Utilities/generate")
 
-
-
 inquirer
 .prompt([
     {
@@ -39,22 +37,7 @@ inquirer
     {
         type: "input",
         name: "credits",
-        message: "Please list any acknowledgments here."
-    },
-    {
-        type: "confirm",
-        name: "addcredit",
-        message: "Would you like to add a contributor?"
-    },
-    {
-        type: "input",
-        name: "teammate",
-        message: "Please list the name, role, and github profile of your colleague here. Make sure to use [text](url) format for any links."
-    },
-    {
-        type: "confirm",
-        name: "addagain",
-        message: "Would you like to add another contributor?"
+        message: "Please list any acknowledgments here. If others contributed to your work, be sure to link to their github profiles."
     },
     {
         type: "input",
