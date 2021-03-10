@@ -2,7 +2,7 @@
   
   ## Description 
       
-  ReadmeGen was created to help simplify one of the most vital aspects of development; README documentation. Using Node.js and Inquirer, ReadmeGen uses a short bettery of questions to fill out and format a concisely written README file.
+  ReadmeGen was created to help simplify one of the most vital aspects of development; README documentation. Using Node.js and Inquirer, ReadmeGen uses a short battery of questions to fill out and format a concisely written README file.
 
   
       
